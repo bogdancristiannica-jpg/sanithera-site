@@ -5,10 +5,36 @@ import { motion } from "framer-motion";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError("");
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          spital: formData.get("spital"),
+          email: formData.get("email"),
+          telefon: formData.get("telefon"),
+          mesaj: formData.get("mesaj"),
+        }),
+      });
+
+      if (!res.ok) throw new Error();
+      setSubmitted(true);
+    } catch {
+      setError("Eroare la trimitere. Încercați din nou sau scrieți-ne la office@sanithera.ro");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -116,6 +142,7 @@ export default function Contact() {
                   </label>
                   <input
                     type="text"
+                    name="spital"
                     required
                     className="w-full bg-surface border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-gray-500 focus:border-blue focus:outline-none transition-colors min-h-[44px]"
                     placeholder="Spitalul Municipal..."
@@ -127,6 +154,7 @@ export default function Contact() {
                   </label>
                   <input
                     type="email"
+                    name="email"
                     required
                     className="w-full bg-surface border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-gray-500 focus:border-blue focus:outline-none transition-colors min-h-[44px]"
                     placeholder="contact@spital.ro"
@@ -138,6 +166,7 @@ export default function Contact() {
                   </label>
                   <input
                     type="tel"
+                    name="telefon"
                     className="w-full bg-surface border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-gray-500 focus:border-blue focus:outline-none transition-colors min-h-[44px]"
                     placeholder="07xx xxx xxx"
                   />
@@ -147,16 +176,21 @@ export default function Contact() {
                     Mesaj / Întrebare
                   </label>
                   <textarea
+                    name="mesaj"
                     rows={4}
                     className="w-full bg-surface border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-gray-500 focus:border-blue focus:outline-none transition-colors resize-none"
                     placeholder="Cu ce vă putem ajuta?"
                   />
                 </div>
+                {error && (
+                  <p className="text-red-400 text-sm text-center">{error}</p>
+                )}
                 <button
                   type="submit"
-                  className="w-full bg-blue hover:bg-blue-bright text-white font-semibold py-4 rounded-xl transition-all text-lg min-h-[44px]"
+                  disabled={loading}
+                  className="w-full bg-blue hover:bg-blue-bright text-white font-semibold py-4 rounded-xl transition-all text-lg min-h-[44px] disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Trimite →
+                  {loading ? "Se trimite..." : "Trimite →"}
                 </button>
               </form>
             )}
