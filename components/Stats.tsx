@@ -5,15 +5,18 @@ import { motion } from "framer-motion";
 const stats = [
   {
     number: "15–30%",
-    description: "Din venitul DRG pierdut anual din erori de codificare",
+    description:
+      "Din venitul DRG contractat rămâne neîncasat anual — din erori sistematice de codificare, nu din lipsă de activitate.",
   },
   {
     number: "1 din 3",
-    description: "Spitale publice cu acreditare ANMCS în risc la ciclul II",
+    description:
+      "Spitale publice evaluate în ciclul II ANMCS se confruntă cu deficiențe critice de documentare și conformitate. Cele mai multe pot fi rezolvate cu un plan structurat.",
   },
   {
     number: "Zero",
-    description: "Firme specializate pe spitalul public mic-mediu din România",
+    description:
+      "Firme de consultanță din România acoperă simultan DRG, CPU, calitate, achiziții și digitalizare pentru spitalul public mic-mediu.",
   },
 ];
 
@@ -27,7 +30,7 @@ export default function Stats() {
           viewport={{ once: true }}
           className="text-blue font-mono text-sm tracking-widest uppercase mb-4"
         >
-          Context
+          Realitatea din teren
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -36,7 +39,7 @@ export default function Stats() {
           transition={{ delay: 0.1 }}
           className="font-syne font-bold text-[36px] md:text-[48px] leading-tight mb-16"
         >
-          Realitatea sistemului sanitar românesc
+          Datele pe care nimeni nu le spune cu voce tare.
         </motion.h2>
 
         <div className="grid md:grid-cols-3 gap-6">
@@ -52,7 +55,7 @@ export default function Stats() {
               <p className="font-syne font-bold text-[56px] text-blue leading-none mb-4 group-hover:drop-shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all">
                 {stat.number}
               </p>
-              <p className="text-gray-300 text-lg">{stat.description}</p>
+              <p className="text-gray-300 text-lg leading-relaxed">{stat.description}</p>
             </motion.div>
           ))}
         </div>

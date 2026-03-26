@@ -6,37 +6,43 @@ const services = [
   {
     icon: "⚡",
     title: "Optimizare DRG & Venituri",
-    description: "Recuperăm venitul pierdut. Rezultate din luna 3.",
+    description:
+      "Identificăm erorile de codificare care reduc finanțarea DRG, instruim medicii și implementăm protocoale de documentare clinică. Impactul financiar devine vizibil din luna 3 de colaborare.",
     highlight: false,
   },
   {
     icon: "🚨",
-    title: "Organizare CPU & Protocoale",
-    description: "Conformitate completă. Triaj Manchester.",
+    title: "Organizare CPU & Protocoale Clinice",
+    description:
+      "CPU-ul este cel mai verificat punct al spitalului și cel mai expus riscului contractual. Implementăm triajul Manchester, elaborăm setul complet de protocoale clinice și pregătim documentația pentru inspecțiile DSP și MS.",
     highlight: false,
   },
   {
     icon: "✅",
     title: "Calitate & Acreditare ANMCS",
-    description: "GAP analysis, SMC, cultură siguranță pacienți.",
+    description:
+      "Evaluăm distanța față de standardele ANMCS ciclu II, activăm Sistemul de Management al Calității și măsurăm cultura siguranței pacienților prin instrumente validate internațional. Acreditarea nu mai poate fi lăsată pe ultima sută de metri.",
     highlight: false,
   },
   {
     icon: "📋",
     title: "Achiziții Publice SEAP",
-    description: "Plan consolidat, conformitate Legea 98/2016.",
+    description:
+      "Achizițiile fragmentate generează costuri administrative disproporționate și expun instituția la riscuri juridice reale. Construim planul anual consolidat, elaborăm documentații conforme și eliminăm riscul de contestații.",
     highlight: false,
   },
   {
     icon: "📈",
     title: "Dezvoltare Strategică",
-    description: "Piața de servicii, finanțări POS Sănătate, plan 3 ani.",
+    description:
+      "Analizăm zona de influență, identificăm serviciile cu cerere neacoperită și identificăm finanțările disponibile prin POS Sănătate 2021–2027 și FEDR prin ADR. Creștem spitalul strategic, nu la întâmplare.",
     highlight: false,
   },
   {
     icon: "🤖",
     title: "Digitalizare & AI Custom",
-    description: "Aplicații specifice spitalului vostru.",
+    description:
+      "Nu există software generic care să rezolve problemele specifice unui spital. Putem dezvolta, împreună cu beneficiarul, aplicații custom: dashboard DRG în timp real, asistent AI pentru codificare ICD-10, platformă digitală protocoale CPU. Tehnologie care lucrează pentru voi, nu invers.",
     highlight: true,
   },
 ];
@@ -69,8 +75,7 @@ export default function Services() {
           transition={{ delay: 0.2 }}
           className="text-gray-500 text-lg max-w-2xl mb-16"
         >
-          Nicio altă firmă din România nu le acoperă simultan pentru spitalul
-          public.
+          Nicio altă firmă din România nu le acoperă simultan pentru spitalul public.
         </motion.p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -88,10 +93,12 @@ export default function Services() {
               }`}
             >
               <span className="text-3xl mb-4 block">{service.icon}</span>
-              <h3 className="font-syne font-bold text-xl mb-2 text-white">
+              <h3 className="font-syne font-bold text-xl mb-3 text-white">
                 {service.title}
               </h3>
-              <p className="text-gray-300">{service.description}</p>
+              <p className="text-gray-300 text-[15px] leading-relaxed">
+                {service.description}
+              </p>
             </motion.div>
           ))}
         </div>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Servicii", href: "#servicii" },
@@ -28,13 +29,15 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-gold to-yellow-600 flex items-center justify-center font-syne font-bold text-deep text-xl">
-            S
-          </div>
-          <span className="font-syne font-bold text-xl text-white tracking-tight">
-            SANITHERA
-          </span>
+        <a href="#" className="flex items-center group">
+          <Image
+            src="/logo.png"
+            alt="SANITHERA Medical Solutions"
+            width={160}
+            height={60}
+            className="h-12 w-auto object-contain rounded-lg"
+            priority
+          />
         </a>
 
         {/* Desktop Links */}
@@ -62,21 +65,9 @@ export default function Navbar() {
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
-          <span
-            className={`block w-6 h-0.5 bg-white transition-all ${
-              mobileOpen ? "rotate-45 translate-y-2" : ""
-            }`}
-          />
-          <span
-            className={`block w-6 h-0.5 bg-white transition-all ${
-              mobileOpen ? "opacity-0" : ""
-            }`}
-          />
-          <span
-            className={`block w-6 h-0.5 bg-white transition-all ${
-              mobileOpen ? "-rotate-45 -translate-y-2" : ""
-            }`}
-          />
+          <span className={`block w-6 h-0.5 bg-white transition-all ${mobileOpen ? "rotate-45 translate-y-2" : ""}`} />
+          <span className={`block w-6 h-0.5 bg-white transition-all ${mobileOpen ? "opacity-0" : ""}`} />
+          <span className={`block w-6 h-0.5 bg-white transition-all ${mobileOpen ? "-rotate-45 -translate-y-2" : ""}`} />
         </button>
       </div>
 

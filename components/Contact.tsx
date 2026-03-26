@@ -64,7 +64,12 @@ export default function Contact() {
                 <p className="text-gray-500 text-sm uppercase tracking-wider mb-1">
                   Disponibilitate
                 </p>
-                <p className="text-white text-lg">Disponibili național</p>
+                <p className="text-white text-lg">Disponibili național · Deplasare la sediul clientului</p>
+              </div>
+              <div className="pt-4 border-t border-white/10">
+                <p className="text-gray-300 text-lg italic leading-relaxed">
+                  "Discutăm situația actuală a spitalului, estimăm impactul măsurilor rezultate din analiza de audit și identificăm prioritățile concrete — în 90 de minute."
+                </p>
               </div>
             </div>
           </motion.div>
