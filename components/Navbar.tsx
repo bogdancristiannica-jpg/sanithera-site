@@ -35,7 +35,7 @@ export default function Navbar() {
             alt="SANITHERA Medical Solutions"
             width={160}
             height={60}
-            className="h-12 w-auto object-contain rounded-lg"
+            className="h-16 w-auto object-contain rounded-lg"
             priority
           />
         </a>
