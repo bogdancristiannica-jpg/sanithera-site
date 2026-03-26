@@ -68,7 +68,7 @@ export default function Contact() {
               </div>
               <div className="pt-4 border-t border-white/10">
                 <p className="text-gray-300 text-lg italic leading-relaxed">
-                  "Discutăm situația actuală a spitalului, estimăm impactul măsurilor rezultate din analiza de audit și identificăm prioritățile concrete — în 90 de minute."
+                  &quot;Discutăm situația actuală a spitalului, estimăm impactul măsurilor rezultate din analiza de audit și identificăm prioritățile concrete — în 90 de minute.&quot;
                 </p>
               </div>
             </div>
