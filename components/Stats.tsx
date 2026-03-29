@@ -14,9 +14,9 @@ const stats = [
       "Spitale publice evaluate în ciclul II ANMCS se confruntă cu deficiențe critice de documentare și conformitate. Cele mai multe pot fi rezolvate cu un plan structurat.",
   },
   {
-    number: "Zero concurenți",
+    number: "Integrat",
     description:
-      "Firme de consultanță din România acoperă simultan DRG, CPU, calitate, achiziții și digitalizare pentru spitalul public mic-mediu.",
+      "Majoritatea consultanților oferă servicii care vizează spitalele doar dintr-un anumit punct de vedere: DRG, Achiziții sau acreditare. Experiența noastră ne permite să oferim soluții integrate și personalizate pentru toate problemele voastre.",
   },
 ];
 

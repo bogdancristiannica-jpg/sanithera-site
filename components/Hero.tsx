@@ -19,7 +19,7 @@ export default function Hero() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue/10 rounded-full blur-[150px]" />
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center overflow-hidden">
+      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -38,7 +38,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15 }}
-          className="font-syne font-bold text-[36px] md:text-[60px] lg:text-[68px] leading-[1.05] tracking-tight mb-6"
+          className="font-syne font-bold text-[32px] md:text-[52px] lg:text-[60px] leading-[1.08] tracking-tight mb-6"
         >
           Spitalul vostru ar putea rata oportunități.
           <br />
