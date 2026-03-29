@@ -102,6 +102,9 @@ export default function HowWeWork() {
           <p className="font-syne font-semibold text-xl text-white">
             Fiecare livrabil este documentat, măsurabil și al vostru.
           </p>
+          <p className="font-syne font-medium text-lg text-gray-300 mt-3">
+            Fiecare livrabil este al vostru, indiferent dacă continuăm colaborarea.
+          </p>
         </motion.div>
       </div>
     </section>

@@ -14,7 +14,7 @@ export default function Footer() {
           />
         </div>
         <p className="text-gray-500 text-sm mb-2">
-          SANITHERA Medical Solutions SRL
+          SANITHERA Medical Solutions SRL, București, România.
         </p>
         <p className="text-gray-500 text-sm mb-4">
           Consultanță integrată pentru spitalele publice din România

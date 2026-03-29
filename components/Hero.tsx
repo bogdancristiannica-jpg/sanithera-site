@@ -40,9 +40,9 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.15 }}
           className="font-syne font-bold text-[42px] md:text-[72px] leading-[1.05] tracking-tight mb-6"
         >
-          Spitalul vostru ratează oportunități.
+          Spitalul vostru ar putea rata oportunități.
           <br />
-          Noi vă putem ajuta.
+          Noi vă ajutăm să le identificați.
           <br />
           <span className="text-blue">Cunoaștem sistemul din interior, nu din manuale.</span>
         </motion.h1>

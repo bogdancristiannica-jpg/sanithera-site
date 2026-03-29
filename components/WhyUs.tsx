@@ -3,10 +3,10 @@
 import { motion } from "framer-motion";
 
 const reasons = [
-  "Cunoaștem sistemul din interior. Nu din manuale.",
-  "Livrăm rezultate în 30 de zile. Nu rapoarte de 200 de pagini.",
-  "Suntem acolo când arde. Nu doar la ședințele lunare.",
-  "Tehnologie AI aplicată la realitatea spitalului public românesc.",
+  "Cunoaștem sistemul din interior, nu din manuale. Avem experiență de peste 30 de ani în sistem.",
+  "Primele rezultate concrete în 30 de zile. Nu rapoarte de 200 de pagini.",
+  "Disponibili când aveți nevoie. Nu doar la ședințele programate.",
+  "Aplicații digitale construite pe realitatea spitalului vostru, nu software generic.",
 ];
 
 export default function WhyUs() {

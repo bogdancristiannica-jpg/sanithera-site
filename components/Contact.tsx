@@ -52,7 +52,7 @@ export default function Contact() {
           viewport={{ once: true }}
           className="font-syne font-bold text-[36px] md:text-[48px] leading-tight mb-4 text-center"
         >
-          Primul pas nu costă nimic.
+          90 de minute care vă arată exact unde sunteți și ce puteți îmbunătăți.
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -61,7 +61,7 @@ export default function Contact() {
           transition={{ delay: 0.1 }}
           className="text-gray-300 text-lg md:text-xl text-center mb-16 max-w-xl mx-auto"
         >
-          Consultație inițială gratuită de 90 de minute. Fără obligații.
+          Gratuit. Fără obligații. Venim la sediul spitalului.
         </motion.p>
 
         <div className="grid md:grid-cols-2 gap-12 md:gap-16">
@@ -94,7 +94,7 @@ export default function Contact() {
               </div>
               <div className="pt-4 border-t border-white/10">
                 <p className="text-gray-300 text-lg italic leading-relaxed">
-                  &quot;Discutăm situația actuală a spitalului, estimăm impactul măsurilor rezultate din analiza de audit și identificăm prioritățile concrete — în 90 de minute.&quot;
+                  &quot;Discutăm situația actuală, identificăm împreună prioritățile și estimăm impactul concret al primelor măsuri — totul în 90 de minute, la voi.&quot;
                 </p>
               </div>
             </div>

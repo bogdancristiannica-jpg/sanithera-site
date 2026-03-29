@@ -5,44 +5,44 @@ import { motion } from "framer-motion";
 const services = [
   {
     icon: "⚡",
-    title: "Optimizare DRG & Venituri",
+    title: "DRG & Venituri — Știți sigur că încasați tot ce vi se cuvine?",
     description:
-      "Identificăm erorile de codificare care reduc finanțarea DRG, instruim medicii și implementăm protocoale de documentare clinică. Impactul financiar devine vizibil din luna 3 de colaborare.",
+      "Multe spitale descoperă abia la audit că o parte din veniturile DRG contractate rămân neîncasate din cauza unor erori de codificare ușor de corectat. Evaluăm împreună situația, identificăm unde se pierd bani și instruim echipa medicală să documenteze corect. Impactul devine vizibil din luna 3.",
     highlight: false,
   },
   {
     icon: "🚨",
-    title: "Organizare CPU & Protocoale Clinice",
+    title: "CPU & Protocoale — Sunteți pregătiți pentru următoarea inspecție?",
     description:
-      "CPU-ul este cel mai verificat punct al spitalului și cel mai expus riscului contractual. Implementăm triajul Manchester, elaborăm setul complet de protocoale clinice și pregătim documentația pentru inspecțiile DSP și MS.",
+      "CPU-ul este punctul cel mai expus al spitalului la inspecțiile DSP și MS. Verificăm împreună gradul de conformitate, organizăm triajul Manchester și elaborăm protocoalele clinice necesare. Când vine inspecția, documentația e gata.",
     highlight: false,
   },
   {
     icon: "✅",
-    title: "Calitate & Acreditare ANMCS",
+    title: "Calitate & Acreditare — Cât de departe sunteți de standardele ANMCS?",
     description:
-      "Evaluăm distanța față de standardele ANMCS ciclu II, activăm Sistemul de Management al Calității și măsurăm cultura siguranței pacienților prin instrumente validate internațional. Acreditarea nu mai poate fi lăsată pe ultima sută de metri.",
+      "Ciclul II de acreditare ANMCS ridică ștacheta. Evaluăm distanța reală față de standarde, verificăm și îmbunătățim sistemul de management al calității și măsurăm cultura siguranței prin instrumente validate internațional. Știți exact unde sunteți și ce mai aveți de făcut.",
     highlight: false,
   },
   {
     icon: "📋",
-    title: "Achiziții Publice SEAP",
+    title: "Achiziții publice — Planul anual vă protejează sau vă expune?",
     description:
-      "Achizițiile fragmentate generează costuri administrative disproporționate și expun instituția la riscuri juridice reale. Construim planul anual consolidat, elaborăm documentații conforme și eliminăm riscul de contestații.",
+      "Achizițiile fragmentate nu sunt doar ineficiente — sunt și un risc juridic. Analizăm împreună situația curentă, consolidăm planul anual de achiziții și elaborăm documentațiile conforme. Rezultatul: proceduri mai rapide, contestații mai puține.",
     highlight: false,
   },
   {
     icon: "📈",
-    title: "Dezvoltare Strategică",
+    title: "Dezvoltare strategică — Ce servicii lipsesc în zona voastră?",
     description:
-      "Analizăm zona de influență, identificăm serviciile cu cerere neacoperită și identificăm finanțările disponibile prin POS Sănătate 2021–2027 și FEDR prin ADR. Creștem spitalul strategic, nu la întâmplare.",
+      "Fiecare spital are o zonă de influență cu nevoi specifice. Analizăm cererea neacoperită, identificăm finanțările disponibile — POS Sănătate 2021–2027, FEDR prin ADR — și construim un plan de dezvoltare care răspunde nevoilor reale, nu presupunerilor.",
     highlight: false,
   },
   {
     icon: "🤖",
-    title: "Digitalizare & AI Custom",
+    title: "Digitalizare & AI — Ce ar face un soft construit exact pe nevoile spitalului vostru?",
     description:
-      "Nu există software generic care să rezolve problemele specifice unui spital. Putem dezvolta, împreună cu beneficiarul, aplicații custom: dashboard DRG în timp real, asistent AI pentru codificare ICD-10, platformă digitală protocoale CPU. Tehnologie care lucrează pentru voi, nu invers.",
+      "Software-ul generic rareori rezolvă problemele specifice ale unui spital. Dezvoltăm împreună aplicații pe măsură: dashboard DRG în timp real, asistent AI pentru codificare ICD-10, platformă digitală pentru protocoalele CPU. Tehnologia care lucrează pentru voi, nu invers.",
     highlight: true,
   },
 ];
