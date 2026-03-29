@@ -61,7 +61,7 @@ export default function Contact() {
           transition={{ delay: 0.1 }}
           className="text-gray-300 text-lg md:text-xl text-center mb-16 max-w-xl mx-auto"
         >
-          Gratuit. Fără obligații. Venim la sediul spitalului.
+          Gratuit. Fără obligații. Ne întâlnim la sediul spitalului sau programăm o discuție video.
         </motion.p>
 
         <div className="grid md:grid-cols-2 gap-12 md:gap-16">
