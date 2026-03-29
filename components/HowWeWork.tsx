@@ -100,10 +100,10 @@ export default function HowWeWork() {
           className="mt-12 bg-card border border-blue/20 rounded-2xl p-6 md:p-8 text-center"
         >
           <p className="font-syne font-semibold text-xl text-white">
-            Fiecare livrabil este documentat, măsurabil și al vostru.
+            Fiecare livrabil este documentat, măsurabil și vă aparține, indiferent dacă continuăm colaborarea sau nu.
           </p>
           <p className="font-syne font-medium text-lg text-gray-300 mt-3">
-            Fiecare livrabil este al vostru, indiferent dacă continuăm colaborarea.
+            Ce s-a făcut rămâne bun făcut.
           </p>
         </motion.div>
       </div>
