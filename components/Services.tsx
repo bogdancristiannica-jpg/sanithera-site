@@ -43,7 +43,7 @@ const services = [
     title: "Digitalizare & AI — Ce ar face un soft construit exact pe nevoile spitalului vostru?",
     description:
       "Software-ul generic rareori rezolvă problemele specifice ale unui spital. Dezvoltăm împreună aplicații pe măsură: dashboard DRG în timp real, asistent AI pentru codificare ICD-10, platformă digitală pentru protocoalele CPU. Tehnologia care lucrează pentru voi, nu invers.",
-    highlight: true,
+    highlight: false,
   },
 ];
 
