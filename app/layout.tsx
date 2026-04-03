@@ -13,6 +13,7 @@ const syne = Syne({
   display: "swap",
   variable: "--font-syne",
   weight: ["600", "700", "800"],
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {

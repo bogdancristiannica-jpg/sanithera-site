@@ -4,7 +4,7 @@ const c = content.hero;
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-deep">
+    <section className="relative min-h-screen flex items-center justify-center bg-deep">
       {/* Grid background */}
       <div className="absolute inset-0">
         <div
