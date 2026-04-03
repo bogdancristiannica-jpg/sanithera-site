@@ -34,3 +34,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Claude Code — fișiere interne de lucru, NU se urcă pe GitHub
+CLAUDE.md
+PROMPT-*.md
+TASKS.md
+SESIUNE-*.md
+REZUMAT-*.md
+SANITHERA-MODIFICARI-*.md
