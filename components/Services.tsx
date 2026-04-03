@@ -1,39 +1,46 @@
 "use client";
 
+import Link from "next/link";
 import { useFadeInOnScroll } from "@/hooks/useIntersectionObserver";
 
 const services = [
   {
+    slug: "drg-venituri",
     icon: "⚡",
     title: "DRG & Venituri — Știți sigur că încasați tot ce vi se cuvine?",
     description:
       "Multe spitale descoperă abia la audit că o parte din veniturile DRG contractate rămân neîncasate din cauza unor erori de codificare ușor de corectat. Evaluăm împreună situația, identificăm unde se pierd bani și instruim echipa medicală să documenteze corect. Impactul devine vizibil din luna 3.",
   },
   {
+    slug: "cpu-protocoale",
     icon: "🚨",
     title: "CPU & Protocoale — Sunteți pregătiți pentru următoarea inspecție?",
     description:
       "CPU-ul este punctul cel mai expus al spitalului la inspecțiile DSP și MS. Verificăm împreună gradul de conformitate, organizăm triajul Manchester și elaborăm protocoalele clinice necesare. Când vine inspecția, documentația e gata.",
   },
   {
+    slug: "calitate-acreditare",
     icon: "✅",
     title: "Calitate & Acreditare — Cât de departe sunteți de standardele ANMCS?",
     description:
       "Ciclul II de acreditare ANMCS ridică ștacheta. Evaluăm distanța reală față de standarde, verificăm și îmbunătățim sistemul de management al calității și măsurăm cultura siguranței prin instrumente validate internațional. Știți exact unde sunteți și ce mai aveți de făcut.",
   },
   {
+    slug: "achizitii-publice",
     icon: "📋",
     title: "Achiziții publice — Planul anual vă protejează sau vă expune?",
     description:
       "Achizițiile fragmentate nu sunt doar ineficiente — sunt și un risc juridic. Analizăm împreună situația curentă, consolidăm planul anual de achiziții și elaborăm documentațiile conforme. Rezultatul: proceduri mai rapide, contestații mai puține.",
   },
   {
+    slug: "dezvoltare-strategica",
     icon: "📈",
     title: "Dezvoltare strategică — Ce servicii lipsesc în zona voastră?",
     description:
       "Fiecare spital are o zonă de influență cu nevoi specifice. Analizăm cererea neacoperită, identificăm finanțările disponibile — POS Sănătate 2021–2027, FEDR prin ADR — și construim un plan de dezvoltare care răspunde nevoilor reale, nu presupunerilor.",
   },
   {
+    slug: "digitalizare-ai",
     icon: "🤖",
     title: "Digitalizare & AI — Ce ar face un soft construit exact pe nevoile spitalului vostru?",
     description:
@@ -68,9 +75,15 @@ export default function Services() {
               <h3 className="font-syne font-bold text-xl mb-3 text-white">
                 {service.title}
               </h3>
-              <p className="text-gray-300 text-[15px] leading-relaxed">
+              <p className="text-gray-300 text-[15px] leading-relaxed mb-4">
                 {service.description}
               </p>
+              <Link
+                href={`/servicii/${service.slug}`}
+                className="text-blue hover:text-blue-bright text-sm font-semibold transition-colors"
+              >
+                Află mai mult →
+              </Link>
             </div>
           ))}
         </div>
