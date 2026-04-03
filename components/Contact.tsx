@@ -1,12 +1,13 @@
 "use client";
 
 import { useState, FormEvent } from "react";
-import { motion } from "framer-motion";
+import { useFadeInOnScroll } from "@/hooks/useIntersectionObserver";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const ref = useFadeInOnScroll();
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -44,35 +45,19 @@ export default function Contact() {
       style={{
         background: "linear-gradient(180deg, #0f1729 0%, #020408 100%)",
       }}
+      ref={ref}
     >
       <div className="max-w-7xl mx-auto px-6">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="font-syne font-bold text-[36px] md:text-[48px] leading-[1.15] mb-4 text-center"
-        >
+        <h2 className="fade-in-on-scroll font-syne font-bold text-[36px] md:text-[48px] leading-[1.15] mb-4 text-center">
           90 de minute care vă arată exact unde sunteți și ce puteți îmbunătăți.
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="text-gray-300 text-lg md:text-xl text-center mb-16 max-w-xl mx-auto"
-        >
+        </h2>
+        <p className="fade-in-on-scroll text-gray-300 text-lg md:text-xl text-center mb-16 max-w-xl mx-auto">
           Gratuit. Fără obligații. Ne întâlnim la sediul spitalului sau programăm o discuție video.
-        </motion.p>
+        </p>
 
         <div className="grid md:grid-cols-2 gap-12 md:gap-16">
           {/* Left — Info */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="flex flex-col justify-center"
-          >
+          <div className="fade-in-on-scroll flex flex-col justify-center">
             <div className="space-y-6">
               <div>
                 <p className="text-gray-500 text-sm uppercase tracking-wider mb-1">
@@ -98,15 +83,10 @@ export default function Contact() {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Right — Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
-          >
+          <div className="fade-in-on-scroll">
             {submitted ? (
               <div className="bg-card border border-blue/20 rounded-2xl p-8 md:p-12 text-center">
                 <div className="w-16 h-16 rounded-full bg-blue/10 flex items-center justify-center mx-auto mb-6">
@@ -194,7 +174,7 @@ export default function Contact() {
                 </button>
               </form>
             )}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

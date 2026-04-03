@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useFadeInOnScroll } from "@/hooks/useIntersectionObserver";
 
 const steps = [
   {
@@ -27,26 +27,17 @@ const steps = [
 ];
 
 export default function HowWeWork() {
+  const ref = useFadeInOnScroll();
+
   return (
-    <section id="cum-lucram" className="bg-surface py-24 md:py-32">
+    <section id="cum-lucram" className="bg-surface py-24 md:py-32" ref={ref}>
       <div className="max-w-7xl mx-auto px-6">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-blue font-mono text-sm tracking-widest uppercase mb-4"
-        >
+        <p className="fade-in-on-scroll text-blue font-mono text-sm tracking-widest uppercase mb-4">
           Metodologie
-        </motion.p>
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="font-syne font-bold text-[36px] md:text-[48px] leading-[1.15] mb-16"
-        >
+        </p>
+        <h2 className="fade-in-on-scroll font-syne font-bold text-[36px] md:text-[48px] leading-[1.15] mb-16">
           Primele 90 de zile. Concret și măsurabil.
-        </motion.h2>
+        </h2>
 
         <div className="relative">
           {/* Vertical line connector */}
@@ -54,13 +45,10 @@ export default function HowWeWork() {
 
           <div className="space-y-8">
             {steps.map((step, i) => (
-              <motion.div
+              <div
                 key={i}
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.2 }}
-                className="flex gap-6 md:gap-8 items-start"
+                className="fade-in-on-scroll flex gap-6 md:gap-8 items-start"
+                style={{ transitionDelay: `${i * 200}ms` }}
               >
                 {/* Step number */}
                 <div className="flex-shrink-0 w-20 h-20 rounded-2xl bg-blue/10 border border-blue/20 flex items-center justify-center">
@@ -87,25 +75,19 @@ export default function HowWeWork() {
                     {step.deliverable}
                   </p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.6 }}
-          className="mt-12 bg-card border border-blue/20 rounded-2xl p-6 md:p-8 text-center"
-        >
+        <div className="fade-in-on-scroll mt-12 bg-card border border-blue/20 rounded-2xl p-6 md:p-8 text-center">
           <p className="font-syne font-semibold text-xl text-white">
             Fiecare livrabil este documentat, măsurabil și vă aparține, indiferent dacă continuăm colaborarea sau nu.
           </p>
           <p className="font-syne font-medium text-lg text-gray-300 mt-3">
             Ce s-a făcut rămâne bun făcut.
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
