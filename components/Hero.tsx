@@ -4,7 +4,10 @@ const c = content.hero;
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-deep">
+    <section
+      className="relative min-h-screen flex items-center justify-center"
+      style={{ background: "linear-gradient(180deg, #020408 0%, #061229 30%, #0d2451 50%, #1a3a6e 100%)" }}
+    >
       {/* Grid background */}
       <div className="absolute inset-0">
         <div

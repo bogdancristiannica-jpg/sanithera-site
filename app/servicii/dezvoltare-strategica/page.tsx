@@ -24,6 +24,7 @@ export default function Page() {
       <ServicePageTemplate
         title={service.title}
         icon={service.icon}
+        slug={service.slug}
         paragraphs={service.paragraphs}
         benefits={service.benefits}
         otherServices={getOtherServices(service.slug)}

@@ -1,17 +1,19 @@
 "use client";
 
 import { useFadeInOnScroll } from "@/hooks/useIntersectionObserver";
+import Image from "next/image";
 import Link from "next/link";
 
 interface ServicePage {
   title: string;
   icon: string;
+  slug: string;
   paragraphs: string[];
   benefits: string[];
   otherServices: { slug: string; title: string }[];
 }
 
-export default function ServicePageTemplate({ title, icon, paragraphs, benefits, otherServices }: ServicePage) {
+export default function ServicePageTemplate({ title, icon, slug, paragraphs, benefits, otherServices }: ServicePage) {
   const ref = useFadeInOnScroll();
 
   return (
@@ -42,6 +44,18 @@ export default function ServicePageTemplate({ title, icon, paragraphs, benefits,
                 {p}
               </p>
             ))}
+          </div>
+
+          {/* Hero image */}
+          <div className="mt-12 rounded-2xl overflow-hidden">
+            <Image
+              src={`/images/servicii/${slug}.webp`}
+              alt={title}
+              width={1216}
+              height={640}
+              className="w-full h-auto"
+              priority
+            />
           </div>
         </div>
       </section>
