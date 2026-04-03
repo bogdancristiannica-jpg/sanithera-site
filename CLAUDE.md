@@ -1,24 +1,64 @@
+# SANITHERA.RO — Reguli pentru Claude Code
+
+## Proiect
+- Site de prezentare: sanithera.ro
+- Stack: Next.js 14 (App Router), Tailwind CSS, TypeScript
+- Hosting: Vercel (Pro), DNS: Cloudflare
+- Email: Proton Mail (SMTP token pentru formular contact)
+- Repo: GitHub, deploy automat la push pe main
+
+## Reguli Git — OBLIGATORII
+- **NU lucra NICIODATĂ direct pe main.** Creează branch pentru fiecare task (ex: `fix/fonts`, `feat/service-pages`, `fix/smtp-proton`).
+- Commit separat după fiecare pas logic.
+- Când branch-ul e gata și testat: merge în main, push, Vercel face deploy automat.
+- Dacă ceva nu merge: `git revert` pe commit-ul problematic, nu șterge codul manual.
+- NU face push pe main fără confirmarea explicită a lui Bogdan.
+
+## Reguli de lucru
+- Plan → aprobare explicită → execuție. NICIO acțiune fără OK.
+- Dacă ceva nu merge după 2 încercări: STOP, raportează, caută pe internet soluții verificate.
+- Citește codul existent ÎNAINTE de a modifica.
+- Nu adăuga dependențe noi fără aprobare.
+- Nu inventa funcționalități care nu au fost cerute.
+- Explică CE faci, DE CE, CE ÎNSEAMNĂ — la fiecare pas.
+
+## Structura proiectului
+```
+/Users/bogdannica/Documents/Consultanta spitale/sanithera-site/
+├── app/
+│   ├── api/contact/route.ts    ← formular, SMTP Proton
+│   ├── layout.tsx              ← layout global, fonturi, meta tags
+│   ├── page.tsx                ← pagina principală
+│   └── servicii/               ← pagini individuale (de creat)
+├── components/                 ← Hero, Stats, Services, etc.
+├── lib/content.ts              ← tot textul site-ului (de creat)
+├── public/                     ← logo, og-image, robots.txt, llms.txt, sitemap
+├── CLAUDE.md                   ← ACEST FIȘIER
+└── PROMPT-REFACTOR-COMPLET.md  ← promptul curent de lucru
+```
+
+## Env vars (Vercel dashboard, NU în cod)
+- `PROTON_SMTP_USER` = office@sanithera.ro
+- `PROTON_SMTP_TOKEN` = token SMTP din Proton Settings
+- Variabilele vechi GMAIL_USER / GMAIL_APP_PASSWORD sunt de ȘTERS din Vercel după migrare.
+
+## Ce NU mai e relevant
+- Repo-ul vechi Emergent din `/Users/bogdannica/Documents/GitHub/sanithera-medical-solutions/` — ABANDONAT, nu-l atinge.
+- Framer Motion — ELIMINAT, înlocuit cu CSS pur.
+- Google Fonts extern — ELIMINAT, folosim next/font.
+- Google Workspace — ÎNCHIS, nu mai există. SMTP e pe Proton.
+
+## Compatibilitate
+- Site-ul trebuie să funcționeze decent pe browsere vechi (calculatoare din spitale: Windows 7/Vista, Chrome vechi, IE11 nu e necesar dar Edge vechi da).
+- Zero dependențe JavaScript grele pentru animații.
+- CSS animations în loc de JS animations.
+
 <!-- VERCEL BEST PRACTICES START -->
 ## Best practices for developing on Vercel
 
-These defaults are optimized for AI coding agents (and humans) working on apps that deploy to Vercel.
-
-- Treat Vercel Functions as stateless + ephemeral (no durable RAM/FS, no background daemons), use Blob or marketplace integrations for preserving state
-- Edge Functions (standalone) are deprecated; prefer Vercel Functions
-- Don't start new projects on Vercel KV/Postgres (both discontinued); use Marketplace Redis/Postgres instead
+- Treat Vercel Functions as stateless + ephemeral
 - Store secrets in Vercel Env Variables; not in git or `NEXT_PUBLIC_*`
-- Provision Marketplace native integrations with `vercel integration add` (CI/agent-friendly)
-- Sync env + project settings with `vercel env pull` / `vercel pull` when you need local/offline parity
-- Use `waitUntil` for post-response work; avoid the deprecated Function `context` parameter
-- Set Function regions near your primary data source; avoid cross-region DB/service roundtrips
-- Tune Fluid Compute knobs (e.g., `maxDuration`, memory/CPU) for long I/O-heavy calls (LLMs, APIs)
-- Use Runtime Cache for fast **regional** caching + tag invalidation (don't treat it as global KV)
-- Use Cron Jobs for schedules; cron runs in UTC and triggers your production URL via HTTP GET
-- Use Vercel Blob for uploads/media; Use Edge Config for small, globally-read config
-- If Enable Deployment Protection is enabled, use a bypass secret to directly access them
-- Add OpenTelemetry via `@vercel/otel` on Node; don't expect OTEL support on the Edge runtime
+- Set Function regions near your primary data source
+- Use Cron Jobs for schedules; cron runs in UTC
 - Enable Web Analytics + Speed Insights early
-- Use AI Gateway for model routing, set AI_GATEWAY_API_KEY, using a model string (e.g. 'anthropic/claude-sonnet-4.6'), Gateway is already default in AI SDK
-  needed. Always curl https://ai-gateway.vercel.sh/v1/models first; never trust model IDs from memory
-- For durable agent loops or untrusted code: use Workflow (pause/resume/state) + Sandbox; use Vercel MCP for secure infra access
 <!-- VERCEL BEST PRACTICES END -->
