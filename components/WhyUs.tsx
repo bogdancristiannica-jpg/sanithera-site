@@ -11,7 +11,7 @@ export default function WhyUs() {
   return (
     <section id="de-ce-noi" className="bg-deep py-24 md:py-32" ref={ref}>
       <div className="max-w-5xl mx-auto px-6">
-        <h2 className="fade-in-on-scroll font-syne font-bold text-[36px] md:text-[48px] leading-[1.15] mb-2">
+        <h2 className="fade-in-on-scroll font-syne font-bold text-[36px] md:text-[48px] leading-[1.25] mb-2">
           {c.title}
         </h2>
         <p className="fade-in-on-scroll text-gray-500 text-xl italic mb-16">

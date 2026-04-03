@@ -15,7 +15,7 @@ export default function Services() {
         <p className="fade-in-on-scroll text-blue font-mono text-sm tracking-widest uppercase mb-4">
           {c.section_label}
         </p>
-        <h2 className="fade-in-on-scroll font-syne font-bold text-[36px] md:text-[48px] leading-[1.15] mb-4">
+        <h2 className="fade-in-on-scroll font-syne font-bold text-[36px] md:text-[48px] leading-[1.25] mb-4">
           {c.section_title}
         </h2>
         <p className="fade-in-on-scroll text-gray-500 text-lg max-w-2xl mb-16">

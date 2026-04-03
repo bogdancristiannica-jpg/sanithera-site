@@ -14,7 +14,7 @@ export default function HowWeWork() {
         <p className="fade-in-on-scroll text-blue font-mono text-sm tracking-widest uppercase mb-4">
           {c.section_label}
         </p>
-        <h2 className="fade-in-on-scroll font-syne font-bold text-[36px] md:text-[48px] leading-[1.15] mb-16">
+        <h2 className="fade-in-on-scroll font-syne font-bold text-[36px] md:text-[48px] leading-[1.25] mb-16">
           {c.section_title}
         </h2>
 

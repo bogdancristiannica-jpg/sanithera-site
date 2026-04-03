@@ -14,7 +14,7 @@ export default function Stats() {
         <p className="fade-in-on-scroll text-blue font-mono text-sm tracking-widest uppercase mb-4">
           {c.section_label}
         </p>
-        <h2 className="fade-in-on-scroll font-syne font-bold text-[36px] md:text-[48px] leading-[1.15] mb-16">
+        <h2 className="fade-in-on-scroll font-syne font-bold text-[36px] md:text-[48px] leading-[1.25] mb-16">
           {c.section_title}
         </h2>
 
@@ -25,7 +25,7 @@ export default function Stats() {
               className="fade-in-on-scroll group bg-card border border-white/5 rounded-2xl p-8 hover:border-blue/30 transition-all"
               style={{ transitionDelay: `${i * 150}ms` }}
             >
-              <p className="font-syne font-bold text-[56px] text-blue leading-[1.1] mb-4 group-hover:drop-shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all">
+              <p className="font-syne font-bold text-[56px] text-blue leading-[1.25] mb-4 group-hover:drop-shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all">
                 {stat.number}
               </p>
               <p className="text-gray-300 text-lg leading-relaxed">{stat.description}</p>

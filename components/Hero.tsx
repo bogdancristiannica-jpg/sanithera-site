@@ -29,7 +29,7 @@ export default function Hero() {
         </div>
 
         {/* H1 */}
-        <h1 className="font-syne font-bold text-[32px] md:text-[52px] lg:text-[60px] leading-[1.15] tracking-tight mb-6">
+        <h1 className="font-syne font-bold text-[32px] md:text-[52px] lg:text-[60px] leading-[1.25] tracking-tight mb-6">
           {c.title_line1}
           <br />
           {c.title_line2}

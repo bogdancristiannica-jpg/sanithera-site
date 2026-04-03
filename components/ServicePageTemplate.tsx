@@ -33,7 +33,7 @@ export default function ServicePageTemplate({ title, icon, paragraphs, benefits,
       <section className="bg-deep py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-6">
           <span className="text-4xl mb-6 block">{icon}</span>
-          <h1 className="font-syne font-bold text-[32px] md:text-[48px] lg:text-[56px] leading-[1.15] tracking-tight mb-8">
+          <h1 className="font-syne font-bold text-[32px] md:text-[48px] lg:text-[56px] leading-[1.25] tracking-tight mb-8">
             {title}
           </h1>
           <div className="space-y-6">
@@ -49,7 +49,7 @@ export default function ServicePageTemplate({ title, icon, paragraphs, benefits,
       {/* Benefits */}
       <section className="bg-surface py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="fade-in-on-scroll font-syne font-bold text-[28px] md:text-[36px] leading-[1.15] mb-10">
+          <h2 className="fade-in-on-scroll font-syne font-bold text-[28px] md:text-[36px] leading-[1.25] mb-10">
             Ce obțineți concret
           </h2>
           <div className="space-y-4">
@@ -70,7 +70,7 @@ export default function ServicePageTemplate({ title, icon, paragraphs, benefits,
       {/* CTA */}
       <section className="bg-deep py-16 md:py-24 text-center">
         <div className="max-w-3xl mx-auto px-6">
-          <h2 className="fade-in-on-scroll font-syne font-bold text-[28px] md:text-[36px] leading-[1.15] mb-6">
+          <h2 className="fade-in-on-scroll font-syne font-bold text-[28px] md:text-[36px] leading-[1.25] mb-6">
             Discutăm despre spitalul vostru?
           </h2>
           <p className="fade-in-on-scroll text-gray-300 text-lg mb-8">
@@ -88,7 +88,7 @@ export default function ServicePageTemplate({ title, icon, paragraphs, benefits,
       {/* Other services */}
       <section className="bg-surface py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="fade-in-on-scroll font-syne font-bold text-[24px] md:text-[30px] leading-[1.15] mb-8">
+          <h2 className="fade-in-on-scroll font-syne font-bold text-[24px] md:text-[30px] leading-[1.25] mb-8">
             Alte servicii
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">

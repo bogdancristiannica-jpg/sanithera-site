@@ -51,7 +51,7 @@ export default function Contact() {
       ref={ref}
     >
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="fade-in-on-scroll font-syne font-bold text-[36px] md:text-[48px] leading-[1.15] mb-4 text-center">
+        <h2 className="fade-in-on-scroll font-syne font-bold text-[36px] md:text-[48px] leading-[1.25] mb-4 text-center">
           {c.title}
         </h2>
         <p className="fade-in-on-scroll text-gray-300 text-lg md:text-xl text-center mb-16 max-w-xl mx-auto">
