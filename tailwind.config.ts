@@ -17,8 +17,8 @@ const config: Config = {
         "gold": "#c9a84c",
       },
       fontFamily: {
-        syne: ["Syne", "sans-serif"],
-        inter: ["Inter", "sans-serif"],
+        syne: ["var(--font-syne)", "system-ui", "sans-serif"],
+        inter: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
     },
   },

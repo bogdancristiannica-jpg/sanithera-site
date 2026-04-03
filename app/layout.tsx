@@ -1,5 +1,19 @@
 import type { Metadata } from "next";
+import { Inter, Syne } from "next/font/google";
 import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
+  variable: "--font-inter",
+});
+
+const syne = Syne({
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
+  variable: "--font-syne",
+  weight: ["600", "700", "800"],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.sanithera.ro"),
@@ -37,18 +51,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ro" className="scroll-smooth">
+    <html lang="ro" className={`${inter.variable} ${syne.variable} scroll-smooth`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
-          rel="stylesheet"
-        />
         {/* JSON-LD: Organization */}
         <script
           type="application/ld+json"
