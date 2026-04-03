@@ -64,7 +64,7 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="font-syne font-bold text-[36px] md:text-[48px] leading-tight mb-4"
+          className="font-syne font-bold text-[36px] md:text-[48px] leading-[1.15] mb-4"
         >
           Șase domenii. Un singur partener.
         </motion.h2>

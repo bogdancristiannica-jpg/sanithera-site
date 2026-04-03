@@ -50,7 +50,7 @@ export default function Contact() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-syne font-bold text-[36px] md:text-[48px] leading-tight mb-4 text-center"
+          className="font-syne font-bold text-[36px] md:text-[48px] leading-[1.15] mb-4 text-center"
         >
           90 de minute care vă arată exact unde sunteți și ce puteți îmbunătăți.
         </motion.h2>

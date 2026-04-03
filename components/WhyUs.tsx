@@ -17,7 +17,7 @@ export default function WhyUs() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-syne font-bold text-[36px] md:text-[48px] leading-tight mb-2"
+          className="font-syne font-bold text-[36px] md:text-[48px] leading-[1.15] mb-2"
         >
           Cunoaștem sistemul din interior.
         </motion.h2>

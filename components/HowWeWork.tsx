@@ -43,7 +43,7 @@ export default function HowWeWork() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="font-syne font-bold text-[36px] md:text-[48px] leading-tight mb-16"
+          className="font-syne font-bold text-[36px] md:text-[48px] leading-[1.15] mb-16"
         >
           Primele 90 de zile. Concret și măsurabil.
         </motion.h2>
