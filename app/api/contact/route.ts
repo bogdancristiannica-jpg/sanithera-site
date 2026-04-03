@@ -13,18 +13,18 @@ export async function POST(req: Request) {
     }
 
     const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
+      host: "smtp.protonmail.ch",
       port: 587,
       secure: false,
       auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_APP_PASSWORD,
+        user: process.env.PROTON_SMTP_USER,
+        pass: process.env.PROTON_SMTP_TOKEN,
       },
     });
 
     await transporter.sendMail({
-      from: `"Sanithera Site" <${process.env.GMAIL_USER}>`,
-      to: process.env.GMAIL_USER,
+      from: `"Sanithera Site" <${process.env.PROTON_SMTP_USER}>`,
+      to: process.env.PROTON_SMTP_USER,
       replyTo: email,
       subject: `Cerere consultație - ${spital}`,
       text: [
