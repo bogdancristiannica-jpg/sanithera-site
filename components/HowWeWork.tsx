@@ -1,30 +1,9 @@
 "use client";
 
 import { useFadeInOnScroll } from "@/hooks/useIntersectionObserver";
+import { content } from "@/lib/content";
 
-const steps = [
-  {
-    phase: "1",
-    title: "Diagnostic",
-    period: "Zilele 1–30",
-    description: "Audit DRG, CPU, ANMCS",
-    deliverable: "Raport priorități",
-  },
-  {
-    phase: "2",
-    title: "Intervenție imediată",
-    period: "Zilele 31–60",
-    description: "Corectare codificare, protocoale",
-    deliverable: "Recuperare venituri DRG",
-  },
-  {
-    phase: "3",
-    title: "Consolidare",
-    period: "Zilele 61–90",
-    description: "Formare echipă, acreditare, digital",
-    deliverable: "Plan strategic 6 luni",
-  },
-];
+const c = content.methodology;
 
 export default function HowWeWork() {
   const ref = useFadeInOnScroll();
@@ -33,10 +12,10 @@ export default function HowWeWork() {
     <section id="cum-lucram" className="bg-surface py-24 md:py-32" ref={ref}>
       <div className="max-w-7xl mx-auto px-6">
         <p className="fade-in-on-scroll text-blue font-mono text-sm tracking-widest uppercase mb-4">
-          Metodologie
+          {c.section_label}
         </p>
         <h2 className="fade-in-on-scroll font-syne font-bold text-[36px] md:text-[48px] leading-[1.15] mb-16">
-          Primele 90 de zile. Concret și măsurabil.
+          {c.section_title}
         </h2>
 
         <div className="relative">
@@ -44,7 +23,7 @@ export default function HowWeWork() {
           <div className="hidden md:block absolute left-[39px] top-8 bottom-8 w-px bg-gradient-to-b from-blue via-blue/50 to-blue/10" />
 
           <div className="space-y-8">
-            {steps.map((step, i) => (
+            {c.steps.map((step, i) => (
               <div
                 key={i}
                 className="fade-in-on-scroll flex gap-6 md:gap-8 items-start"
@@ -82,10 +61,10 @@ export default function HowWeWork() {
 
         <div className="fade-in-on-scroll mt-12 bg-card border border-blue/20 rounded-2xl p-6 md:p-8 text-center">
           <p className="font-syne font-semibold text-xl text-white">
-            Fiecare livrabil este documentat, măsurabil și vă aparține, indiferent dacă continuăm colaborarea sau nu.
+            {c.guarantee}
           </p>
           <p className="font-syne font-medium text-lg text-gray-300 mt-3">
-            Ce s-a făcut rămâne bun făcut.
+            {c.tagline}
           </p>
         </div>
       </div>

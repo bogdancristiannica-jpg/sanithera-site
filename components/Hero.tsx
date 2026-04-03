@@ -1,3 +1,7 @@
+import { content } from "@/lib/content";
+
+const c = content.hero;
+
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-deep">
@@ -20,24 +24,24 @@ export default function Hero() {
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-blue/30 bg-blue/5 mb-8">
           <span className="w-2 h-2 rounded-full bg-blue animate-pulse" />
           <span className="text-blue-bright text-sm font-medium">
-            Consultanță specializată pentru spitale publice
+            {c.badge}
           </span>
         </div>
 
         {/* H1 */}
         <h1 className="font-syne font-bold text-[32px] md:text-[52px] lg:text-[60px] leading-[1.15] tracking-tight mb-6">
-          Spitalul vostru ar putea rata oportunități.
+          {c.title_line1}
           <br />
-          Noi vă ajutăm să le identificați.
+          {c.title_line2}
           <br />
-          <span className="text-blue">Cunoaștem sistemul din interior, nu din manuale.</span>
+          <span className="text-blue">{c.title_highlight}</span>
         </h1>
 
         {/* Subtitle */}
         <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-          Consultanță integrată pentru spitalele publice din România.
+          {c.subtitle_line1}
           <br className="hidden md:block" />{" "}
-          DRG · Calitate · CPU · Achiziții · Digitalizare.
+          {c.subtitle_line2}
         </p>
 
         {/* CTAs */}
@@ -46,13 +50,13 @@ export default function Hero() {
             href="#contact"
             className="bg-blue hover:bg-blue-bright text-white font-semibold px-8 py-4 rounded-xl transition-all text-lg min-h-[44px] inline-flex items-center justify-center"
           >
-            Programează consultație gratuită →
+            {c.cta_primary}
           </a>
           <a
             href="#servicii"
             className="border border-white/20 hover:border-white/40 text-white font-semibold px-8 py-4 rounded-xl transition-all text-lg min-h-[44px] inline-flex items-center justify-center"
           >
-            Vezi serviciile ↓
+            {c.cta_secondary}
           </a>
         </div>
       </div>

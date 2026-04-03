@@ -2,51 +2,9 @@
 
 import Link from "next/link";
 import { useFadeInOnScroll } from "@/hooks/useIntersectionObserver";
+import { content } from "@/lib/content";
 
-const services = [
-  {
-    slug: "drg-venituri",
-    icon: "⚡",
-    title: "DRG & Venituri — Știți sigur că încasați tot ce vi se cuvine?",
-    description:
-      "Multe spitale descoperă abia la audit că o parte din veniturile DRG contractate rămân neîncasate din cauza unor erori de codificare ușor de corectat. Evaluăm împreună situația, identificăm unde se pierd bani și instruim echipa medicală să documenteze corect. Impactul devine vizibil din luna 3.",
-  },
-  {
-    slug: "cpu-protocoale",
-    icon: "🚨",
-    title: "CPU & Protocoale — Sunteți pregătiți pentru următoarea inspecție?",
-    description:
-      "CPU-ul este punctul cel mai expus al spitalului la inspecțiile DSP și MS. Verificăm împreună gradul de conformitate, organizăm triajul Manchester și elaborăm protocoalele clinice necesare. Când vine inspecția, documentația e gata.",
-  },
-  {
-    slug: "calitate-acreditare",
-    icon: "✅",
-    title: "Calitate & Acreditare — Cât de departe sunteți de standardele ANMCS?",
-    description:
-      "Ciclul II de acreditare ANMCS ridică ștacheta. Evaluăm distanța reală față de standarde, verificăm și îmbunătățim sistemul de management al calității și măsurăm cultura siguranței prin instrumente validate internațional. Știți exact unde sunteți și ce mai aveți de făcut.",
-  },
-  {
-    slug: "achizitii-publice",
-    icon: "📋",
-    title: "Achiziții publice — Planul anual vă protejează sau vă expune?",
-    description:
-      "Achizițiile fragmentate nu sunt doar ineficiente — sunt și un risc juridic. Analizăm împreună situația curentă, consolidăm planul anual de achiziții și elaborăm documentațiile conforme. Rezultatul: proceduri mai rapide, contestații mai puține.",
-  },
-  {
-    slug: "dezvoltare-strategica",
-    icon: "📈",
-    title: "Dezvoltare strategică — Ce servicii lipsesc în zona voastră?",
-    description:
-      "Fiecare spital are o zonă de influență cu nevoi specifice. Analizăm cererea neacoperită, identificăm finanțările disponibile — POS Sănătate 2021–2027, FEDR prin ADR — și construim un plan de dezvoltare care răspunde nevoilor reale, nu presupunerilor.",
-  },
-  {
-    slug: "digitalizare-ai",
-    icon: "🤖",
-    title: "Digitalizare & AI — Ce ar face un soft construit exact pe nevoile spitalului vostru?",
-    description:
-      "Software-ul generic rareori rezolvă problemele specifice ale unui spital. Dezvoltăm împreună aplicații pe măsură: dashboard DRG în timp real, asistent AI pentru codificare ICD-10, platformă digitală pentru protocoalele CPU. Tehnologia care lucrează pentru voi, nu invers.",
-  },
-];
+const c = content.services;
 
 export default function Services() {
   const ref = useFadeInOnScroll();
@@ -55,17 +13,17 @@ export default function Services() {
     <section id="servicii" className="bg-deep py-24 md:py-32" ref={ref}>
       <div className="max-w-7xl mx-auto px-6">
         <p className="fade-in-on-scroll text-blue font-mono text-sm tracking-widest uppercase mb-4">
-          Ce facem
+          {c.section_label}
         </p>
         <h2 className="fade-in-on-scroll font-syne font-bold text-[36px] md:text-[48px] leading-[1.15] mb-4">
-          Șase domenii. Un singur partener.
+          {c.section_title}
         </h2>
         <p className="fade-in-on-scroll text-gray-500 text-lg max-w-2xl mb-16">
-          Nicio altă firmă din România nu le acoperă simultan pentru spitalul public.
+          {c.section_subtitle}
         </p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, i) => (
+          {c.items.map((service, i) => (
             <div
               key={i}
               className="fade-in-on-scroll group bg-card border border-white/5 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:border-blue/30"

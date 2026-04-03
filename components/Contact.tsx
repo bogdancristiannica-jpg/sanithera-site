@@ -2,6 +2,9 @@
 
 import { useState, FormEvent } from "react";
 import { useFadeInOnScroll } from "@/hooks/useIntersectionObserver";
+import { content } from "@/lib/content";
+
+const c = content.contact;
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -32,7 +35,7 @@ export default function Contact() {
       if (!res.ok) throw new Error();
       setSubmitted(true);
     } catch {
-      setError("Eroare la trimitere. Încercați din nou sau scrieți-ne la office@sanithera.ro");
+      setError(c.form.error_message);
     } finally {
       setLoading(false);
     }
@@ -49,10 +52,10 @@ export default function Contact() {
     >
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="fade-in-on-scroll font-syne font-bold text-[36px] md:text-[48px] leading-[1.15] mb-4 text-center">
-          90 de minute care vă arată exact unde sunteți și ce puteți îmbunătăți.
+          {c.title}
         </h2>
         <p className="fade-in-on-scroll text-gray-300 text-lg md:text-xl text-center mb-16 max-w-xl mx-auto">
-          Gratuit. Fără obligații. Ne întâlnim la sediul spitalului sau programăm o discuție video.
+          {c.subtitle}
         </p>
 
         <div className="grid md:grid-cols-2 gap-12 md:gap-16">
@@ -63,23 +66,23 @@ export default function Contact() {
                 <p className="text-gray-500 text-sm uppercase tracking-wider mb-1">
                   Email
                 </p>
-                <p className="text-white text-lg">office@sanithera.ro</p>
+                <p className="text-white text-lg">{c.email}</p>
               </div>
               <div>
                 <p className="text-gray-500 text-sm uppercase tracking-wider mb-1">
                   Web
                 </p>
-                <p className="text-white text-lg">sanithera.ro</p>
+                <p className="text-white text-lg">{c.web}</p>
               </div>
               <div>
                 <p className="text-gray-500 text-sm uppercase tracking-wider mb-1">
                   Disponibilitate
                 </p>
-                <p className="text-white text-lg">Disponibili național · Deplasare la sediul clientului</p>
+                <p className="text-white text-lg">{c.availability}</p>
               </div>
               <div className="pt-4 border-t border-white/10">
                 <p className="text-gray-300 text-lg italic leading-relaxed">
-                  &quot;Discutăm situația actuală, identificăm împreună prioritățile și estimăm impactul concret al primelor măsuri — totul în 90 de minute, la voi.&quot;
+                  &quot;{c.quote}&quot;
                 </p>
               </div>
             </div>
@@ -105,10 +108,10 @@ export default function Contact() {
                   </svg>
                 </div>
                 <p className="font-syne font-bold text-2xl text-white mb-2">
-                  Vă mulțumim!
+                  {c.form.success_title}
                 </p>
                 <p className="text-gray-300">
-                  Vă contactăm în 24 de ore.
+                  {c.form.success_message}
                 </p>
               </div>
             ) : (
@@ -118,48 +121,48 @@ export default function Contact() {
               >
                 <div>
                   <label className="block text-sm text-gray-300 mb-2">
-                    Numele spitalului
+                    {c.form.label_spital}
                   </label>
                   <input
                     type="text"
                     name="spital"
                     required
                     className="w-full bg-surface border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-gray-500 focus:border-blue focus:outline-none transition-colors min-h-[44px]"
-                    placeholder="Spitalul Municipal..."
+                    placeholder={c.form.placeholder_spital}
                   />
                 </div>
                 <div>
                   <label className="block text-sm text-gray-300 mb-2">
-                    Email instituțional
+                    {c.form.label_email}
                   </label>
                   <input
                     type="email"
                     name="email"
                     required
                     className="w-full bg-surface border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-gray-500 focus:border-blue focus:outline-none transition-colors min-h-[44px]"
-                    placeholder="contact@spital.ro"
+                    placeholder={c.form.placeholder_email}
                   />
                 </div>
                 <div>
                   <label className="block text-sm text-gray-300 mb-2">
-                    Telefon
+                    {c.form.label_telefon}
                   </label>
                   <input
                     type="tel"
                     name="telefon"
                     className="w-full bg-surface border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-gray-500 focus:border-blue focus:outline-none transition-colors min-h-[44px]"
-                    placeholder="07xx xxx xxx"
+                    placeholder={c.form.placeholder_telefon}
                   />
                 </div>
                 <div>
                   <label className="block text-sm text-gray-300 mb-2">
-                    Mesaj / Întrebare
+                    {c.form.label_mesaj}
                   </label>
                   <textarea
                     name="mesaj"
                     rows={4}
                     className="w-full bg-surface border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-gray-500 focus:border-blue focus:outline-none transition-colors resize-none"
-                    placeholder="Cu ce vă putem ajuta?"
+                    placeholder={c.form.placeholder_mesaj}
                   />
                 </div>
                 {error && (
@@ -170,7 +173,7 @@ export default function Contact() {
                   disabled={loading}
                   className="w-full bg-blue hover:bg-blue-bright text-white font-semibold py-4 rounded-xl transition-all text-lg min-h-[44px] disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {loading ? "Se trimite..." : "Trimite →"}
+                  {loading ? c.form.submitting : c.form.submit}
                 </button>
               </form>
             )}

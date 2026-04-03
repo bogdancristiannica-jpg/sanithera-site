@@ -1,4 +1,7 @@
 import Image from "next/image";
+import { content } from "@/lib/content";
+
+const c = content.footer;
 
 export default function Footer() {
   return (
@@ -13,16 +16,10 @@ export default function Footer() {
             className="h-10 w-auto object-contain rounded-lg"
           />
         </div>
-        <p className="text-gray-500 text-sm mb-2">
-          SANITHERA Medical Solutions SRL, București, România.
-        </p>
-        <p className="text-gray-500 text-sm mb-4">
-          Consultanță integrată pentru spitalele publice din România
-        </p>
-        <p className="text-gray-500 text-sm mb-6">office@sanithera.ro</p>
-        <p className="text-gray-500 text-sm">
-          © 2026 SANITHERA Medical Solutions SRL
-        </p>
+        <p className="text-gray-500 text-sm mb-2">{c.company}</p>
+        <p className="text-gray-500 text-sm mb-4">{c.tagline}</p>
+        <p className="text-gray-500 text-sm mb-6">{c.email}</p>
+        <p className="text-gray-500 text-sm">{c.copyright}</p>
       </div>
     </footer>
   );

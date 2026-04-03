@@ -1,24 +1,9 @@
 "use client";
 
 import { useFadeInOnScroll } from "@/hooks/useIntersectionObserver";
+import { content } from "@/lib/content";
 
-const stats = [
-  {
-    number: "15–30%",
-    description:
-      "Din venitul DRG contractat rămâne neîncasat anual — din erori sistematice de codificare, nu din lipsă de activitate.",
-  },
-  {
-    number: "1 din 3",
-    description:
-      "Spitale publice evaluate în ciclul II ANMCS se confruntă cu deficiențe critice de documentare și conformitate. Cele mai multe pot fi rezolvate cu un plan structurat.",
-  },
-  {
-    number: "Integrat",
-    description:
-      "Majoritatea consultanților oferă servicii care vizează spitalele doar dintr-un anumit punct de vedere: DRG, Achiziții sau acreditare. Experiența noastră ne permite să oferim soluții integrate și personalizate pentru toate problemele voastre.",
-  },
-];
+const c = content.stats;
 
 export default function Stats() {
   const ref = useFadeInOnScroll();
@@ -27,14 +12,14 @@ export default function Stats() {
     <section className="bg-surface py-24 md:py-32" ref={ref}>
       <div className="max-w-7xl mx-auto px-6">
         <p className="fade-in-on-scroll text-blue font-mono text-sm tracking-widest uppercase mb-4">
-          Realitatea din teren
+          {c.section_label}
         </p>
         <h2 className="fade-in-on-scroll font-syne font-bold text-[36px] md:text-[48px] leading-[1.15] mb-16">
-          Datele pe care nimeni nu le spune cu voce tare.
+          {c.section_title}
         </h2>
 
         <div className="grid md:grid-cols-3 gap-6">
-          {stats.map((stat, i) => (
+          {c.items.map((stat, i) => (
             <div
               key={i}
               className="fade-in-on-scroll group bg-card border border-white/5 rounded-2xl p-8 hover:border-blue/30 transition-all"
