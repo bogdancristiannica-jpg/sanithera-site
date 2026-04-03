@@ -5,7 +5,7 @@ const c = content.hero;
 export default function Hero() {
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center"
+      className="relative min-h-screen flex items-center justify-center pt-24 pb-12"
       style={{ background: "linear-gradient(180deg, #020408 0%, #061229 30%, #0d2451 50%, #1a3a6e 100%)" }}
     >
       {/* Grid background */}
