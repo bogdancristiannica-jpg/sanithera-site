@@ -12,15 +12,14 @@ const syne = Syne({
   subsets: ["latin", "latin-ext"],
   display: "swap",
   variable: "--font-syne",
-  weight: ["600", "700", "800"],
+  weight: ["600", "700"],
   adjustFontFallback: true,
 });
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
+  maximumScale: 5,
 };
 
 export const metadata: Metadata = {

@@ -27,9 +27,18 @@ export default function Navbar() {
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 50);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   useEffect(() => {
@@ -44,7 +53,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,border-color] duration-300 will-change-transform ${
         scrolled ? "bg-deep/90 backdrop-blur-xl border-b border-white/5" : "bg-transparent"
       }`}
     >
@@ -75,7 +84,7 @@ export default function Navbar() {
               </svg>
             </button>
             <div
-              className={`absolute top-full left-0 mt-2 w-72 bg-card border border-white/10 rounded-xl shadow-2xl overflow-hidden transition-all duration-200 ${
+              className={`absolute top-full left-0 mt-2 w-72 bg-card border border-white/10 rounded-xl shadow-2xl overflow-hidden transition-[opacity,transform] duration-200 ${
                 servicesOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-2 pointer-events-none"
               }`}
             >
@@ -103,7 +112,7 @@ export default function Navbar() {
           ))}
           <Link
             href="/#contact"
-            className="bg-blue hover:bg-blue-bright text-white font-semibold px-6 py-2.5 rounded-lg transition-all text-[15px]"
+            className="bg-blue hover:bg-blue-bright text-white font-semibold px-6 py-2.5 rounded-lg transition-colors text-[15px]"
           >
             Consultație gratuită
           </Link>
@@ -115,15 +124,15 @@ export default function Navbar() {
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
-          <span className={`block w-6 h-0.5 bg-white transition-all ${mobileOpen ? "rotate-45 translate-y-2" : ""}`} />
-          <span className={`block w-6 h-0.5 bg-white transition-all ${mobileOpen ? "opacity-0" : ""}`} />
-          <span className={`block w-6 h-0.5 bg-white transition-all ${mobileOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+          <span className={`block w-6 h-0.5 bg-white transition-[transform,opacity] ${mobileOpen ? "rotate-45 translate-y-2" : ""}`} />
+          <span className={`block w-6 h-0.5 bg-white transition-[transform,opacity] ${mobileOpen ? "opacity-0" : ""}`} />
+          <span className={`block w-6 h-0.5 bg-white transition-[transform,opacity] ${mobileOpen ? "-rotate-45 -translate-y-2" : ""}`} />
         </button>
       </div>
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden bg-deep/95 backdrop-blur-xl border-t border-white/5 overflow-hidden transition-all duration-300 ${
+        className={`md:hidden bg-deep/95 backdrop-blur-xl border-t border-white/5 overflow-hidden transition-[max-height,opacity] duration-300 ${
           mobileOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
@@ -139,7 +148,7 @@ export default function Navbar() {
             </svg>
           </button>
           <div
-            className={`overflow-hidden transition-all duration-300 ${
+            className={`overflow-hidden transition-[max-height,opacity] duration-300 ${
               mobileServicesOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
             }`}
           >
@@ -169,7 +178,7 @@ export default function Navbar() {
           ))}
           <Link
             href="/#contact"
-            className="bg-blue hover:bg-blue-bright text-white font-semibold px-6 py-3 rounded-lg transition-all text-center mt-2"
+            className="bg-blue hover:bg-blue-bright text-white font-semibold px-6 py-3 rounded-lg transition-colors text-center mt-2"
             onClick={() => setMobileOpen(false)}
           >
             Consultație gratuită

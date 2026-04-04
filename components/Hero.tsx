@@ -19,7 +19,10 @@ export default function Hero() {
           }}
         />
         {/* Radial glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue/10 rounded-full blur-[150px]" />
+        <div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[1200px] rounded-full"
+          style={{ background: 'radial-gradient(circle, rgba(59,130,246,0.08) 0%, rgba(59,130,246,0.04) 40%, rgba(59,130,246,0.01) 65%, transparent 85%)' }}
+        />
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
@@ -51,13 +54,13 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="#contact"
-            className="bg-blue hover:bg-blue-bright text-white font-semibold px-8 py-4 rounded-xl transition-all text-lg min-h-[44px] inline-flex items-center justify-center"
+            className="bg-blue hover:bg-blue-bright text-white font-semibold px-8 py-4 rounded-xl transition-colors text-lg min-h-[44px] inline-flex items-center justify-center"
           >
             {c.cta_primary}
           </a>
           <a
             href="#servicii"
-            className="border border-white/20 hover:border-white/40 text-white font-semibold px-8 py-4 rounded-xl transition-all text-lg min-h-[44px] inline-flex items-center justify-center"
+            className="border border-white/20 hover:border-white/40 text-white font-semibold px-8 py-4 rounded-xl transition-colors text-lg min-h-[44px] inline-flex items-center justify-center"
           >
             {c.cta_secondary}
           </a>

@@ -92,7 +92,7 @@ export default function ServicePageTemplate({ title, icon, slug, paragraphs, ben
           </p>
           <a
             href="/#contact"
-            className="fade-in-on-scroll inline-flex items-center justify-center bg-blue hover:bg-blue-bright text-white font-semibold px-8 py-4 rounded-xl transition-all text-lg"
+            className="fade-in-on-scroll inline-flex items-center justify-center bg-blue hover:bg-blue-bright text-white font-semibold px-8 py-4 rounded-xl transition-colors text-lg"
           >
             Programează consultație gratuită →
           </a>
@@ -110,7 +110,7 @@ export default function ServicePageTemplate({ title, icon, slug, paragraphs, ben
               <Link
                 key={service.slug}
                 href={`/servicii/${service.slug}`}
-                className="fade-in-on-scroll group bg-card border border-white/5 rounded-xl p-5 hover:border-blue/30 transition-all"
+                className="fade-in-on-scroll group bg-card border border-white/5 rounded-xl p-5 hover:border-blue/30 transition-[border-color]"
               >
                 <p className="font-syne font-semibold text-white group-hover:text-blue transition-colors">
                   {service.title}

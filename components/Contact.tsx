@@ -171,7 +171,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-blue hover:bg-blue-bright text-white font-semibold py-4 rounded-xl transition-all text-lg min-h-[44px] disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-blue hover:bg-blue-bright text-white font-semibold py-4 rounded-xl transition-colors text-lg min-h-[44px] disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {loading ? c.form.submitting : c.form.submit}
                 </button>

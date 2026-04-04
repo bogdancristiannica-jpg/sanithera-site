@@ -22,10 +22,10 @@ export default function Stats() {
           {c.items.map((stat, i) => (
             <div
               key={i}
-              className="fade-in-on-scroll group bg-card border border-white/5 rounded-2xl p-8 hover:border-blue/30 transition-all"
+              className="fade-in-on-scroll group bg-card border border-white/5 rounded-2xl p-8 hover:border-blue/30 transition-[border-color]"
               style={{ transitionDelay: `${i * 150}ms` }}
             >
-              <p className="font-syne font-bold text-[56px] text-blue leading-[1.25] mb-4 group-hover:drop-shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all">
+              <p className="font-syne font-bold text-[56px] text-blue leading-[1.25] mb-4 group-hover:drop-shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-[filter]">
                 {stat.number}
               </p>
               <p className="text-gray-300 text-lg leading-relaxed">{stat.description}</p>

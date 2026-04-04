@@ -26,7 +26,7 @@ export default function Services() {
           {c.items.map((service, i) => (
             <div
               key={i}
-              className="fade-in-on-scroll group bg-card border border-white/5 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:border-blue/30"
+              className="fade-in-on-scroll group bg-card border border-white/5 rounded-2xl p-8 transition-[border-color,transform] duration-300 hover:-translate-y-1 hover:border-blue/30"
               style={{ transitionDelay: `${i * 100}ms` }}
             >
               <span className="text-3xl mb-4 block">{service.icon}</span>
