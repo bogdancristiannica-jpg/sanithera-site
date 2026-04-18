@@ -152,13 +152,23 @@ export const content = {
       success_message: "Vă contactăm în 24 de ore.",
       error_message:
         "Eroare la trimitere. Încercați din nou sau scrieți-ne la office@sanithera.ro",
+      gdpr_label: "Sunt de acord cu prelucrarea datelor conform",
+      gdpr_link_text: "Politicii de confidențialitate",
     },
   },
 
   footer: {
     company: "SANITHERA Medical Solutions SRL, București, România.",
+    legal_info: "CUI: 52928758 · J2025088752003",
     tagline: "Consultanță integrată pentru spitalele publice din România",
     email: "office@sanithera.ro",
     copyright: "© 2026 SANITHERA Medical Solutions SRL",
+    links: {
+      privacy: "Politica de confidențialitate",
+      terms: "Termeni și condiții",
+      cookies: "Politica de cookies",
+      anpc: "ANPC",
+      sol: "SOL",
+    },
   },
 };

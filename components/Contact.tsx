@@ -165,6 +165,28 @@ export default function Contact() {
                     placeholder={c.form.placeholder_mesaj}
                   />
                 </div>
+                <div className="flex items-start gap-3">
+                  <input
+                    type="checkbox"
+                    name="gdpr"
+                    id="gdpr"
+                    required
+                    className="mt-1 w-5 h-5 rounded border-white/20 bg-surface text-blue focus:ring-2 focus:ring-blue focus:ring-offset-0 cursor-pointer flex-shrink-0"
+                  />
+                  <label
+                    htmlFor="gdpr"
+                    className="text-sm text-gray-300 cursor-pointer leading-relaxed"
+                  >
+                    {c.form.gdpr_label}{" "}
+                    <a
+                      href="/confidentialitate"
+                      className="text-blue hover:underline"
+                    >
+                      {c.form.gdpr_link_text}
+                    </a>
+                    .
+                  </label>
+                </div>
                 {error && (
                   <p className="text-red-400 text-sm text-center">{error}</p>
                 )}
