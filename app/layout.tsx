@@ -68,10 +68,18 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "SANITHERA Medical Solutions",
+              legalName: "SANITHERA Medical Solutions S.R.L.",
               url: "https://www.sanithera.ro",
               logo: "https://www.sanithera.ro/logo.png",
               description:
                 "Consultanță integrată pentru spitalele publice din România: DRG, Calitate, CPU, Achiziții, Digitalizare.",
+              taxID: "52928758",
+              vatID: "RO52928758",
+              identifier: {
+                "@type": "PropertyValue",
+                propertyID: "Nr. Registrul Comerțului",
+                value: "J2025088752003",
+              },
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "București",
@@ -80,6 +88,7 @@ export default function RootLayout({
               contactPoint: {
                 "@type": "ContactPoint",
                 email: "office@sanithera.ro",
+                telephone: "+40745136707",
                 contactType: "customer service",
                 availableLanguage: "Romanian",
               },

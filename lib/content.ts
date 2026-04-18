@@ -159,8 +159,16 @@ export const content = {
 
   footer: {
     company: "SANITHERA Medical Solutions SRL, București, România.",
+    legal_info: "CUI: 52928758 · J2025088752003",
     tagline: "Consultanță integrată pentru spitalele publice din România",
     email: "office@sanithera.ro",
     copyright: "© 2026 SANITHERA Medical Solutions SRL",
+    links: {
+      privacy: "Politica de confidențialitate",
+      terms: "Termeni și condiții",
+      cookies: "Politica de cookies",
+      anpc: "ANPC",
+      sol: "SOL",
+    },
   },
 };
