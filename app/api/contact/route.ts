@@ -3,7 +3,13 @@ import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
   try {
-    const { spital, email, telefon, mesaj } = await req.json();
+    const { spital, email, telefon, mesaj, website } = await req.json();
+
+    // Honeypot: utilizatorii reali nu văd câmpul „website"; bot-urile îl completează.
+    // Răspundem 200 OK (fake success) ca bot-ul să nu retry-uiască.
+    if (website) {
+      return NextResponse.json({ success: true });
+    }
 
     if (!spital || !email) {
       return NextResponse.json(
