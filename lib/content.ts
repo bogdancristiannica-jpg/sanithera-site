@@ -152,6 +152,8 @@ export const content = {
       success_message: "Vă contactăm în 24 de ore.",
       error_message:
         "Eroare la trimitere. Încercați din nou sau scrieți-ne la office@sanithera.ro",
+      gdpr_label: "Sunt de acord cu prelucrarea datelor conform",
+      gdpr_link_text: "Politicii de confidențialitate",
     },
   },
 
