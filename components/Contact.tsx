@@ -29,6 +29,7 @@ export default function Contact() {
           email: formData.get("email"),
           telefon: formData.get("telefon"),
           mesaj: formData.get("mesaj"),
+          website: formData.get("website"),
         }),
       });
 
@@ -165,6 +166,15 @@ export default function Contact() {
                     placeholder={c.form.placeholder_mesaj}
                   />
                 </div>
+                {/* Honeypot — câmp invizibil pentru utilizatori, capcană pentru bot-uri */}
+                <input
+                  type="text"
+                  name="website"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  className="absolute left-[-9999px] w-px h-px opacity-0 pointer-events-none"
+                />
                 <div className="flex items-start gap-3">
                   <input
                     type="checkbox"
