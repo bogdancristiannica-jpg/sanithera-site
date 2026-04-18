@@ -113,7 +113,7 @@ export default function ConfidentialitatePage() {
             <ul className="list-disc list-inside space-y-1 ml-4">
               <li>Dreptul de acces la datele personale</li>
               <li>Dreptul la rectificare</li>
-              <li>Dreptul la ștergere („dreptul de a fi uitat")</li>
+              <li>Dreptul la ștergere (&bdquo;dreptul de a fi uitat&rdquo;)</li>
               <li>Dreptul la restricționarea prelucrării</li>
               <li>Dreptul la portabilitatea datelor</li>
               <li>Dreptul la opoziție</li>
