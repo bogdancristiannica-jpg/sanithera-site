@@ -15,6 +15,7 @@ body {
   line-height: 1.7;
   touch-action: manipulation;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 ::selection {
